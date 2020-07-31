@@ -1,28 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- 顶部开始 -->
+    <div class="app-header">
+      <Header></Header>
+    </div>
+    <!-- 顶部结束 -->
+    <!-- 中间开始 -->
+    <div class="app-content">
+      <Content></Content>
+    </div>
+    <!-- 中间结束 -->
+    <!-- 底部开始 -->
+    <div class="app-footer">
+      <Footer></Footer>
+    </div>
+    <!-- 底部结束 -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Header from "./components/Header"
+import Content from "./components/Content"
+import Footer from "./components/Footer"
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    Content,
+    Footer,
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html,body,p,span,div,section,header,footer,h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+}
+#app{
+  width: 400px;
+  margin: 20px auto;
+  padding: 0 10px 10px;
+  border: 1px solid #000;
 }
 </style>
